@@ -1,2 +1,16 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
+
+header {
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
 
