@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css"
->
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-    <header class = "pico-background-pumpkin-200">
-        <h1>Welcome to the Snake Game!</h1>
-    </header>
-    <main class="grid">
-        <section>
-            <figure></figure>
-            <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username">
-                <button>Start</button>
-            </form>
-        </section>
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <figure>
+      <header class="main-header">
+        <h1>Fav Songs!</h1>
+      </header>
+      <main>
         <aside>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque magnam harum ut ex est corporis adipisci provident minima? Quidem necessitatibus ratione ad voluptates aperiam aliquam vel inventore voluptatem possimus tenetur. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quisquam ex enim at quasi similique dolorem eligendi corporis eius accusantium molestiae accusamus ipsam suscipit consequatur amet vitae, recusandae quaerat iure? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum amet repellat nemo sint, voluptatem, rerum maxime id impedit debitis explicabo quaerat harum aut unde ducimus optio quasi enim distinctio consequatur!</p>
+          <button class="secondary">Click here to add a song</button>
         </aside>
-    </main>
-</body>
+        <!-- <dialog open>
+          <article>
+            <header>
+              <button aria-label="Close" rel="prev"></button>
+              <p>
+                <strong>Write your song here!</strong>
+              </p>
+            </header>
+            <form>
+              <label for="title">Title:</label>
+              <input type="text" id="title" name="title" />
+              <label for="artist">Artist</label>
+              <input type="text" id="artist" name="artist" />
+              <button>Submit</button>
+            </form>
+          </article>
+        </dialog> -->
+      </main>
+    </figure>
+  </body>
 </html>
