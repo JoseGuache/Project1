@@ -2,21 +2,50 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <div id="gameContent">
-        <canvas id="playArea" width="500" height="500"></canvas>
-        <div id="scoreNumber">0</div>
-        <button id="btnReset">Reset</button>
-    </div>
-    <script src="index.js"></script>
+  <input type="text" id="search-video">
+  <button id="search-btn">Search</button>
+
+
+
+  <article>
+    <header>Header</header>
+    <iframe id="spotifyPlayer" src="https://open.spotify.com/embed/track/29U7stRjqHU6rMiS8BfaI9" width="300" height="80"
+      frameborder="0" allowtransparency="true" allow="encrypted-media">
+    </iframe>
+    <footer>
+
+      <dialog id="dialog">
+        <article>
+          <h2>Lyrics</h2>
+          <p id="lyricContent">
+
+          </p>
+
+          <footer>
+            <button id="closeBtn" class="secondary">
+              Close
+            </button>
+          </footer>
+        </article>
+      </dialog>
+      <p id="lyricsFrame"></p>
+    </footer>
+  </article>
+
+
+
+
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
