@@ -44,7 +44,7 @@ main aside {
     padding: 5rem 3rem 0;
 }
 
-main aside button {
+#modal-trigger {
     padding: 1rem 1rem;
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
