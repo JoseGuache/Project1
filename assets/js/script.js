@@ -53,7 +53,7 @@ async function lyricsApi(params) {
 
 function displayLyrics(results) {
     const lyricsFrame = document.querySelector("#lyricsFrame")
-    lyricsFrame.innerHTML = `${results.lyrics.substring(0, 20)}
+    lyricsFrame.innerHTML = `${results.lyrics.substring(0, 400)}
     ...
           <article aria-label="Modal demo" id="modal-demo"><button class="contrast">Read More</button></article>
     `
@@ -64,7 +64,7 @@ function displayLyrics(results) {
 }
 const closeBtn = document.querySelector("#closeBtn")
 closeBtn.addEventListener('click', closeModal)
-function closeModal(){
+function closeModal() {
     const dialog = document.querySelector("#dialog")
     dialog.removeAttribute("open")
 }
