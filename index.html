@@ -12,36 +12,48 @@
 </head>
 
 <body>
-  <input type="text" id="search-video">
-  <button id="search-btn">Search</button>
+  <!-- <input type="text" id="search-video">
+  <button id="search-btn">Search</button> -->
 
 
+  <main class="container">
+    <header class="grid">
+      <input type="search" id="search-video">
+      <button class="pico-background-blue-850" id="search-btn">Search</button>
+    </header>
 
-  <article>
-    <header>Header</header>
-    <iframe id="spotifyPlayer" src="https://open.spotify.com/embed/track/29U7stRjqHU6rMiS8BfaI9" width="300" height="80"
-      frameborder="0" allowtransparency="true" allow="encrypted-media">
-    </iframe>
-    <footer>
+    <article>
 
-      <dialog id="dialog">
-        <article>
-          <h2>Lyrics</h2>
-          <p id="lyricContent">
+      <section>
+        <header>
+          <h1>Listening to Now:</h1>
+        </header>
+        <iframe id="spotifyPlayer" src="https://open.spotify.com/embed/track/29U7stRjqHU6rMiS8BfaI9" width="100%"
+          height="200" frameborder="0" allowtransparency="true" allow="encrypted-media">
+        </iframe>
+      </section>
 
-          </p>
 
-          <footer>
-            <button id="closeBtn" class="secondary">
-              Close
-            </button>
-          </footer>
-        </article>
-      </dialog>
-      <p id="lyricsFrame"></p>
-    </footer>
-  </article>
+      <!-- <section> -->
+        <dialog id="dialog">
+          <!-- <section> -->
+            <h2>Lyrics</h2>
+            <p id="lyricContent"></p>
+            
+              <button id="closeBtn" class="secondary">
+                Close
+              </button>
+          <!-- </section> -->
+        </dialog>
+        <p id="lyricsFrame"></p>
+      <!-- </section> -->
+    </article>
 
+<footer>
+  <h3>Thanks For Listening</h3>
+</footer>
+
+  </main>
 
 
 

@@ -53,9 +53,9 @@ async function lyricsApi(params) {
 
 function displayLyrics(results) {
     const lyricsFrame = document.querySelector("#lyricsFrame")
-    lyricsFrame.innerHTML = `${results.lyrics.substring(0, 400)}
+    lyricsFrame.innerHTML = `${results.lyrics.substring(0, 350)}
     ...
-          <article aria-label="Modal demo" id="modal-demo"><button class="contrast">Read More</button></article>
+          <div aria-label="Modal demo" id="modal-demo"><button class="contrast">Read More</button></div>
     `
     const lyricContent = document.querySelector("#lyricContent")
     lyricContent.innerHTML = results.lyrics
