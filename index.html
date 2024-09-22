@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Song Finder</title>
+  <title> Song Searcher</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -19,25 +19,33 @@
       <button class="pico-background-blue-850" id="search-btn">Search</button>
     </header>
 
-    <article>
-      <section>
-        <header>
-          <h2>Listening to Now:</h2>
-        </header>
-        <iframe id="spotifyPlayer" src="https://open.spotify.com/embed/track/29U7stRjqHU6rMiS8BfaI9" width="100%"
-          height="200" frameborder="0" allowtransparency="true" allow="encrypted-media">
-        </iframe>
-      </section>
-      
-        <dialog id="dialog">
-            <p id="lyricContent"></p>
-            <button id="closeBtn" class="secondary">Close</button>
-        </dialog>
-        <p id="lyricsFrame"></p>
-    </article>
+    <section>
+      <header>
+        <h2>Listening to Now:</h2>
+      </header>
+
+      <iframe id="spotifyPlayer" src="https://open.spotify.com/embed/track/29U7stRjqHU6rMiS8BfaI9" width="100%"
+        height="200" frameborder="0" allowtransparency="true" allow="encrypted-media">
+      </iframe>
+    </section>
+
+    <section>
+      <dialog id="dialog">
+        <article>
+          <h2>Lyrics</h2>
+          <p id="lyricContent"></p>
+          <footer>
+            <button id="closeBtn" class="secondary">
+              Close
+            </button>
+          </footer>
+        </article>
+      </dialog>
+      <p id="lyricsFrame"></p>
+    </section>
 
     <footer>
-       <h4>Thanks For Listening</h4>
+      <h4>Thanks For Listening</h4>
     </footer>
 
   </main>
