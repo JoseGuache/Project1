@@ -1,16 +1,16 @@
 const searchBtnEl = document.querySelector("#search-btn")
-searchBtnEl.addEventListener("click", searchVideo)
+searchBtnEl.addEventListener("click", searchSong)
 const closeBtn = document.querySelector("#closeBtn")
 closeBtn.addEventListener('click', closeModal)
 
-function searchVideo() {
-    const searchVideoEl = document.querySelector("#search-video")
-    const videoName = searchVideoEl.value;
-    lyricsApi(videoName)
-    populateYouTubeApi(videoName)
+function searchSong() {
+    const searchVideoEl = document.querySelector("#search-song")
+    const songName = searchVideoEl.value;
+    lyricsApi(songName)
+    populateSpotifyApi(songName)
 }
 
-async function populateYouTubeApi(params) {
+async function populateSpotifyApi(params) {
     const url = `https://spotify23.p.rapidapi.com/search/?q=${params}&type=multi&offset=0&limit=1&numberOfTopResults=5`;
     const options = {
         method: 'GET',
