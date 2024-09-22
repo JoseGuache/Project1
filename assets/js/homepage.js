@@ -32,7 +32,7 @@ form.addEventListener('submit', (e)=>{
     }
     listOfSongs.push(singleSong);
     localStorage.setItem('listOfSongs', JSON.stringify(listOfSongs));
-
+    window.location.href = "index.html";
 })
 
 
