@@ -17,13 +17,13 @@
 
 
   <main class="container">
-    <header class="grid">
+
+    <header class="grid" id="header">
       <input type="search" id="search-video">
       <button class="pico-background-blue-850" id="search-btn">Search</button>
     </header>
 
     <article>
-
       <section>
         <header>
           <h1>Listening to Now:</h1>
@@ -33,30 +33,22 @@
         </iframe>
       </section>
 
-
-      <!-- <section> -->
+      <!-- <h2>Lyrics:</h2> -->
+      
         <dialog id="dialog">
-          <!-- <section> -->
-            <h2>Lyrics</h2>
-            <p id="lyricContent"></p>
             
-              <button id="closeBtn" class="secondary">
-                Close
-              </button>
-          <!-- </section> -->
+            <p id="lyricContent"></p>
+            <button id="closeBtn" class="secondary">Close</button>
         </dialog>
         <p id="lyricsFrame"></p>
-      <!-- </section> -->
+      
     </article>
 
-<footer>
-  <h3>Thanks For Listening</h3>
-</footer>
+    <footer>
+       <h4>Thanks For Listening</h4>
+    </footer>
 
   </main>
-
-
-
   <script src="./assets/js/script.js"></script>
 </body>
 

@@ -1,0 +1,21 @@
+h4{
+    display: flex;
+    justify-content: center;
+}
+
+#header{
+    display: flex;
+    justify-content: end;
+}
+
+#search-btn{
+    width: 20%;
+    height: 100%;
+}
+
+#modal-demo{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
