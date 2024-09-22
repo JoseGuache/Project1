@@ -1,7 +1,6 @@
 const searchBtnEl = document.querySelector("#search-btn")
 searchBtnEl.addEventListener("click", searchSong)
-const closeBtn = document.querySelector("#closeBtn")
-closeBtn.addEventListener('click', closeModal)
+
 
 // Uses the input from the search bar to search the song and lyrics from both APIs
 function searchSong() {
@@ -67,14 +66,19 @@ function displayLyrics(results) {
     const modalEL = document.querySelector("#modal-demo")
     modalEL.addEventListener("click", showModal)
 }
- // Opens the modal displaying the full lyrics
-function showModal() {
-    const dialog = document.querySelector("#dialog")
-    dialog.setAttribute("open", "open")
-}
+
+const closeBtn = document.querySelector("#closeBtn")
+closeBtn.addEventListener('click', closeModal)
 
 // The close button for the modal
 function closeModal() {
     const dialog = document.querySelector("#dialog")
     dialog.removeAttribute("open")
 }
+
+ // Opens the modal displaying the full lyrics
+function showModal() {
+    const dialog = document.querySelector("#dialog")
+    dialog.setAttribute("open", "open")
+}
+
