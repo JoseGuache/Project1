@@ -3,6 +3,7 @@ searchBtnEl.addEventListener("click", searchSong)
 const closeBtn = document.querySelector("#closeBtn")
 closeBtn.addEventListener('click', closeModal)
 
+// Uses the input from the search bar to search the song and lyrics from both APIs
 function searchSong() {
     const searchVideoEl = document.querySelector("#search-song")
     const songName = searchVideoEl.value;
@@ -10,6 +11,7 @@ function searchSong() {
     populateSpotifyApi(songName)
 }
 
+// Spotify API
 async function populateSpotifyApi(params) {
     const url = `https://spotify23.p.rapidapi.com/search/?q=${params}&type=multi&offset=0&limit=1&numberOfTopResults=5`;
     const options = {
@@ -30,12 +32,13 @@ async function populateSpotifyApi(params) {
     }
 }
 
+// Displays the search result for the song
 function displaySong(results) {
     const searchFrame = document.querySelector("#spotifyPlayer");
     searchFrame.src = `https://open.spotify.com/embed/track/${results.tracks.items[0].data.id}`
 }
 
-
+// Lyrics Api
 async function lyricsApi(params) {
     const requestOptions = {
         method: "GET",
@@ -51,6 +54,7 @@ async function lyricsApi(params) {
         .catch((error) => console.error(error));
 }
 
+// Displays the lyrics in the paragraph element under the spotify song
 function displayLyrics(results) {
     const lyricsFrame = document.querySelector("#lyricsFrame")
     lyricsFrame.innerHTML = `<h2>Lyrics:</h2>
@@ -63,12 +67,13 @@ function displayLyrics(results) {
     const modalEL = document.querySelector("#modal-demo")
     modalEL.addEventListener("click", showModal)
 }
-
+ // Opens the modal displaying the full lyrics
 function showModal() {
     const dialog = document.querySelector("#dialog")
     dialog.setAttribute("open", "open")
 }
 
+// The close button for the modal
 function closeModal() {
     const dialog = document.querySelector("#dialog")
     dialog.removeAttribute("open")
