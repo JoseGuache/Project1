@@ -12,7 +12,15 @@ closeModal.addEventListener('click', () => {
 
 let form = document.querySelector('form');
 
-let listOfSongs = [];
+let listOfSongs = localStorage.getItem('listOfSongs');
+
+if (listOfSongs === null){
+    listOfSongs = [];
+    localStorage.setItem('listOfSongs', JSON.stringify(listOfSongs));
+} else {
+    listOfSongs = JSON.parse(listOfSongs);
+}
+
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -22,5 +30,9 @@ form.addEventListener('submit', (e)=>{
         title: songTitle.value,
         artist: artist.value
     }
+    listOfSongs.push(singleSong);
+    localStorage.setItem('listOfSongs', JSON.stringify(listOfSongs));
+
 })
+
 
