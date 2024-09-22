@@ -1,5 +1,8 @@
 const searchBtnEl = document.querySelector("#search-btn")
 searchBtnEl.addEventListener("click", searchVideo)
+const closeBtn = document.querySelector("#closeBtn")
+closeBtn.addEventListener('click', closeModal)
+
 function searchVideo() {
     const searchVideoEl = document.querySelector("#search-video")
     const videoName = searchVideoEl.value;
@@ -21,20 +24,17 @@ async function populateYouTubeApi(params) {
         const response = await fetch(url, options);
         const result = await response.json();
         console.log(result);
-        displayVideo(result)
-        // https://www.youtube.com/watch?v=
+        displaySong(result)
     } catch (error) {
         console.error(error);
     }
 }
 
-
-
-function displayVideo(results) {
+function displaySong(results) {
     const searchFrame = document.querySelector("#spotifyPlayer");
     searchFrame.src = `https://open.spotify.com/embed/track/${results.tracks.items[0].data.id}`
 }
-// populateYouTubeApi('beach boys');
+
 
 async function lyricsApi(params) {
     const requestOptions = {
@@ -63,15 +63,13 @@ function displayLyrics(results) {
     const modalEL = document.querySelector("#modal-demo")
     modalEL.addEventListener("click", showModal)
 }
-const closeBtn = document.querySelector("#closeBtn")
-closeBtn.addEventListener('click', closeModal)
-function closeModal() {
-    const dialog = document.querySelector("#dialog")
-    dialog.removeAttribute("open")
-}
-
 
 function showModal() {
     const dialog = document.querySelector("#dialog")
     dialog.setAttribute("open", "open")
+}
+
+function closeModal() {
+    const dialog = document.querySelector("#dialog")
+    dialog.removeAttribute("open")
 }
