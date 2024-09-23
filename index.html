@@ -14,21 +14,41 @@
 <body>
   <main class="container">
 
+    <!-- Button for search form modal -->
     <header class="grid" id="header">
-      <input type="search" id="search-song">
-      <button class="pico-background-blue-850" id="search-btn">Search</button>
+      <button id="searchModalBtn" class="contrast">Search for a new song</button>
     </header>
+
+    <dialog id="searchModal">
+      <article>
+        <header class="modalHeader">
+          <h2>Search for a new song</h2>
+          <button id="searchCloseBtn" aria-label="Close" class="secondary">X</button>
+        </header>
+        <form id="searchForm">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" placeholder="Song Title" />
+          <label for="artist">Artist:</label>
+          <input type="text" id="artist" name="artist" placeholder="Artist Name" />
+          <button type="submit">Search</button>
+        </form>
+      </article>
+    </dialog>
 
     <section>
       <header>
         <h2>Listening to Now:</h2>
       </header>
 
+
+      <!-- Spotify player -->
       <iframe id="spotifyPlayer" src="https://open.spotify.com/embed/track/29U7stRjqHU6rMiS8BfaI9" width="100%"
         height="200" frameborder="0" allowtransparency="true" allow="encrypted-media">
       </iframe>
     </section>
 
+
+    <!-- Lyrics -->
     <section>
       <dialog id="dialog">
         <article>
