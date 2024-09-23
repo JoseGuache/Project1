@@ -1,14 +1,14 @@
-const searchBtnEl = document.querySelector("#search-btn")
-searchBtnEl.addEventListener("click", searchSong)
 const closeBtn = document.querySelector("#closeBtn")
 closeBtn.addEventListener('click', closeModal)
 
-// Uses the input from the search bar to search the song and lyrics from both APIs
-function searchSong() {
-    const searchVideoEl = document.querySelector("#search-song")
-    const songName = searchVideoEl.value;
-    lyricsApi(songName)
-    populateSpotifyApi(songName)
+// get list of songs from local storage
+let listOfSongs = localStorage.getItem('listOfSongs');
+listOfSongs= JSON.parse(listOfSongs);
+
+for (let song of listOfSongs){
+    let songTitle = song.title;
+    let songArtist = song.artist;
+    lyricsApi(songTitle, songArtist);
 }
 
 // Spotify API
@@ -39,20 +39,22 @@ function displaySong(results) {
 }
 
 // Lyrics Api
-async function lyricsApi(params) {
+async function lyricsApi(title, artist) {
     const requestOptions = {
         method: "GET",
         redirect: "follow"
     };
 
-    fetch(`https://api.lyrics.ovh/v1/${params}?=`, requestOptions)
-        .then((response) => response.json())
-        .then((results) => {
-            displayLyrics(results)
-            console.log(results)
+    fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`, requestOptions)
+        .then((response) => {
+            response.json().then((results) => {
+                displayLyrics(results)
+                console.log(results)
+            })
         })
         .catch((error) => console.error(error));
 }
+
 
 // Displays the lyrics in the paragraph element under the spotify song
 function displayLyrics(results) {
