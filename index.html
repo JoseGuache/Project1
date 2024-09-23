@@ -8,6 +8,7 @@
   <title> Song Searcher</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -16,13 +17,13 @@
 
     <!-- Button for search form modal -->
     <header class="grid" id="header">
-      <button id="searchModalBtn" class="contrast">Search for a new song</button>
+      <button class="secondary" id="searchModalBtn" class="contrast">Search for a new song</button>
     </header>
 
     <dialog id="searchModal">
       <article>
         <header class="modalHeader">
-          <h2>Search for a new song</h2>
+          <h2 id="newSong">Search for a new song</h2>
           <button id="searchCloseBtn" aria-label="Close" class="secondary">X</button>
         </header>
         <form id="searchForm">
@@ -30,14 +31,14 @@
           <input type="text" id="title" name="title" placeholder="Song Title" />
           <label for="artist">Artist:</label>
           <input type="text" id="artist" name="artist" placeholder="Artist Name" />
-          <button type="submit">Search</button>
+          <button class="secondary" type="submit">Search</button>
         </form>
       </article>
     </dialog>
 
     <section>
       <header>
-        <h2>Listening to Now:</h2>
+        <h2>Listening To Now:</h2>
       </header>
 
 
@@ -51,8 +52,8 @@
     <!-- Lyrics -->
     <section>
       <dialog id="dialog">
-        <article>
-          <h2>Lyrics</h2>
+        <article id="lyricModal">
+          <h2>Lyrics:</h2>
           <p id="lyricContent"></p>
           <footer>
             <button id="closeBtn" class="secondary">
