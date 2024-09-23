@@ -46,6 +46,8 @@ THEN I can search for a new song.
 
 <a href="https://www.postman.com/cs-demo/public-rest-apis/request/algu09l/lyrics-search?tab=overview">Our Lyrics API</a>
 
+<a href="https://open-props.style/">OpenProp library</a>
+
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
