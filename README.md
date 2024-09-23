@@ -36,7 +36,7 @@ THEN I can search for a new song.
 
 ![alt text](./assets/images/HomepageScreenshot.png)
 
-![alt text](./assets/images/MainPageScreenshot.png)
+![alt text](./assets/images/Main.png)
 
 ## Credits
 
