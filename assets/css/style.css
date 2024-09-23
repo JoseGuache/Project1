@@ -1,19 +1,19 @@
-h4{
+h4 {
     display: flex;
     justify-content: center;
 }
 
-#header{
+#header {
     display: flex;
     justify-content: end;
 }
 
-#search-btn{
+#search-btn {
     width: 20%;
     height: 100%;
 }
 
-#modal-demo{
+#modal-demo {
     margin-top: 20px;
     display: flex;
     justify-content: center;
