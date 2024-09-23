@@ -8,13 +8,31 @@ h4 {
     justify-content: end;
 }
 
-#search-btn {
-    width: 20%;
-    height: 100%;
-}
-
 #modal-demo {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+}
+
+/* Style for the modal header to position the title and button */
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Style the close button */
+#searchCloseBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Hover effect for the close button */
+#searchCloseBtn:hover {
+    color: gray;
 }
