@@ -17,7 +17,9 @@ For our project, we created a website that allows users to search for an artist 
 
 <a href="https://joseguache.github.io/Project1/">Live Page</a>
 
-![alt text](./)
+![alt text](./assets/images/HomepageScreenshot.png)
+
+![alt text](./assets/images/MainPageScreenshot.png)
 
 ## Credits
 
