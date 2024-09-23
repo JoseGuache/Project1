@@ -7,21 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Song Searcher</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
   <main class="container">
 
-    <header class="grid" id="header">
+    <header class="grid" id="search">
       <input type="search" id="search-song">
-      <button class="pico-background-blue-850" id="search-btn">Search</button>
+      <button class="secondary" id="search-btn">Search</button>
     </header>
 
     <section>
       <header>
-        <h2>Listening to Now:</h2>
+        <h2>Listening To Now:</h2>
       </header>
 
       <iframe id="spotifyPlayer" src="https://open.spotify.com/embed/track/29U7stRjqHU6rMiS8BfaI9" width="100%"
@@ -32,7 +35,7 @@
     <section>
       <dialog id="dialog">
         <article>
-          <h2>Lyrics</h2>
+          <h2>Lyrics:</h2>
           <p id="lyricContent"></p>
           <footer>
             <button id="closeBtn" class="secondary">

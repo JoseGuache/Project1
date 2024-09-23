@@ -59,7 +59,7 @@ function displayLyrics(results) {
     lyricsFrame.innerHTML = `<h2>Lyrics:</h2>
     ${results.lyrics.substring(0, 350)}
     ...
-          <div aria-label="Modal demo" id="modal-demo"><button class="outline contrast">Read More</button></div>
+          <div aria-label="Modal demo" id="modal-demo"><button class="secondary">Read More</button></div>
     `
     const lyricContent = document.querySelector("#lyricContent")
     lyricContent.innerHTML = results.lyrics
