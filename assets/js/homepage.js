@@ -24,6 +24,6 @@ document.querySelector('form').addEventListener('submit', function (event) {
         // Ensure the second page URL is correct
         window.location.href = url;
     } else {
-        alert('Please enter name of artist & name of song they have written.');
+        alert('Name of artist and Song required.');
     }
 });
