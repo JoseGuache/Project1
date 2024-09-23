@@ -16,7 +16,7 @@ html{
     background-color: #aa8a63;
 }
 
-article{
+#lyricModal{
     background-color: #aa8a63;
 }
 
@@ -38,9 +38,9 @@ dialog footer{
     color: var(--red-1);
 }
 
-#search-btn {
-    width: 20%;
-    height: 80%;
+#searchModalBtn{
+    /* width: 20%;
+    height: 80%; */
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -48,6 +48,10 @@ dialog footer{
     font-size: var(--font-size-2);
     border: var(--border-size-3) solid var(--gray-1);
     color: var(--red-1);
+}
+
+#newSong{
+    color: var(--pico-secondary-background)
 }
 
 #closeBtn{
@@ -83,6 +87,7 @@ dialog footer{
     align-items: center;
     padding-bottom: 10px;
     border-bottom: 1px solid #ccc;
+    /* background-color: #aa8a63; */
 }
 
 /* Style the close button */
@@ -97,4 +102,14 @@ dialog footer{
 /* Hover effect for the close button */
 #searchCloseBtn:hover {
     color: gray;
+}
+
+#searchForm button{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--font-size-2);
+    border: var(--border-size-3) solid var(--gray-1);
+    color: var(--red-1);
 }

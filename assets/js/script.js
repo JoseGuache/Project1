@@ -61,12 +61,12 @@ async function lyricsApi(title, artist) {
 function displayLyrics(results) {
     const lyricsFrame = document.querySelector("#lyricsFrame");
     if (results.lyrics) {
-      lyricsFrame.innerHTML = `<h2>Lyrics:</h2>
+        lyricsFrame.innerHTML = `<h2>Lyrics:</h2>
       ${results.lyrics.substring(0, 350)}...<div aria-label="Modal demo" id="modal-demo"><button class="secondary">Read More</button></div>`;
-      const lyricContent = document.querySelector("#lyricContent");
-      lyricContent.innerHTML = results.lyrics;
-      const modalEL = document.querySelector("#modal-demo");
-      modalEL.addEventListener("click", showModal);
+        const lyricContent = document.querySelector("#lyricContent");
+        lyricContent.innerHTML = results.lyrics;
+        const modalEL = document.querySelector("#modal-demo");
+        modalEL.addEventListener("click", showModal);
     } else {
         lyricsFrame.innerHTML = `<h2>No lyrics found for this song.</h2>`;
     }
@@ -86,8 +86,39 @@ function closeModal() {
 function showModal() {
     const dialog = document.querySelector("#dialog");
     dialog.setAttribute("open", "open");
-  }
-  
-  // Call the function to search for the song and lyrics when the page loads
-  searchSong();
-  
+}
+
+// Handle form submission for new song search on the second page
+document.querySelector('#searchForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const title = document.querySelector('#title').value;
+    const artist = document.querySelector('#artist').value;
+
+    if (title && artist) {
+        // Redirect the same page with new query parameters
+        const url = `index.html?title=${encodeURIComponent(title)}&artist=${encodeURIComponent(artist)}`;
+        console.log('Redirecting to:', url); // Debugging
+
+        // Ensure the URL changes to load new song details
+        window.location.href = url;
+    } else {
+        alert('Name of artist and Song required.');
+    }
+});
+
+// Handle the modal behavior for opening and closing the search form
+const searchModalTrigger = document.querySelector('#searchModalBtn');
+const searchModal = document.querySelector('#searchModal');
+const searchCloseBtn = document.querySelector('#searchCloseBtn');
+
+searchModalTrigger.addEventListener('click', () => {
+    searchModal.showModal();
+});
+
+searchCloseBtn.addEventListener('click', () => {
+    searchModal.close();
+});
+
+// Call the function to search for the song and lyrics when the page loads
+searchSong();

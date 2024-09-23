@@ -17,13 +17,13 @@
 
     <!-- Button for search form modal -->
     <header class="grid" id="header">
-      <button id="searchModalBtn" class="contrast">Search for a new song</button>
+      <button class="secondary" id="searchModalBtn" class="contrast">Search for a new song</button>
     </header>
 
     <dialog id="searchModal">
       <article>
         <header class="modalHeader">
-          <h2>Search for a new song</h2>
+          <h2 id="newSong">Search for a new song</h2>
           <button id="searchCloseBtn" aria-label="Close" class="secondary">X</button>
         </header>
         <form id="searchForm">
@@ -31,7 +31,7 @@
           <input type="text" id="title" name="title" placeholder="Song Title" />
           <label for="artist">Artist:</label>
           <input type="text" id="artist" name="artist" placeholder="Artist Name" />
-          <button type="submit">Search</button>
+          <button class="secondary" type="submit">Search</button>
         </form>
       </article>
     </dialog>
@@ -52,7 +52,7 @@
     <!-- Lyrics -->
     <section>
       <dialog id="dialog">
-        <article>
+        <article id="lyricModal">
           <h2>Lyrics:</h2>
           <p id="lyricContent"></p>
           <footer>
