@@ -9,6 +9,7 @@ for (let song of listOfSongs){
     let songTitle = song.title;
     let songArtist = song.artist;
     lyricsApi(songTitle, songArtist);
+    populateSpotifyApi(songTitle);
 }
 
 // Spotify API
