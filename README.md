@@ -23,9 +23,13 @@ For our project, we created a website that allows users to search for an artist 
 
 <a href="https://joseguache.github.io/Project1_songSearcher/">Live Page</a>
 
-![alt text](./assets/images/HomepageScreenshot.png)
+<a href="https://docs.google.com/presentation/d/1vgUaMHtYo6d3X-clvsnZskGYqrvpUPdGJyW1HI-4Gc4/edit#slide=id.p">PowerPoint Presentation</a>
 
-![alt text](./assets/images/Main.png)
+
+
+![Homepage](./assets/images/HomepageScreenshot.png)
+
+![Main Page](./assets/images/Main.png)
 
 ## Credits
 

@@ -14,7 +14,7 @@ let form = document.querySelector('form');
 
 let listOfSongs = localStorage.getItem('listOfSongs');
 
-if (listOfSongs === null){
+if (listOfSongs === null) {
     listOfSongs = [];
     localStorage.setItem('listOfSongs', JSON.stringify(listOfSongs));
 } else {
@@ -22,7 +22,7 @@ if (listOfSongs === null){
 }
 
 
-form.addEventListener('submit', (e)=>{
+form.addEventListener('submit', (e) => {
     e.preventDefault();
     let songTitle = document.getElementById('title');
     let artist = document.getElementById('artist');
@@ -32,7 +32,7 @@ form.addEventListener('submit', (e)=>{
     }
     listOfSongs.push(singleSong);
     localStorage.setItem('listOfSongs', JSON.stringify(listOfSongs));
-    window.location.href = "index.html";
+    window.location.href = "main-page.html";
 })
 
 

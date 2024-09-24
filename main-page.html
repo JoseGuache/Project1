@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Song Searcher</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <main class="container">
+
+    <!-- Button for search form modal -->
+    <header class="grid" id="header">
+      <button class="secondary" id="searchModalBtn" class="contrast">Search for a new song</button>
+    </header>
+
+    <dialog id="searchModal">
+      <article>
+        <header class="modalHeader">
+          <h2 id="newSong">Search for a new song</h2>
+          <button id="searchCloseBtn" aria-label="Close" class="secondary">X</button>
+        </header>
+        <form id="searchForm">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" placeholder="Song Title" />
+          <label for="artist">Artist:</label>
+          <input type="text" id="artist" name="artist" placeholder="Artist Name" />
+          <button class="secondary" type="submit">Search</button>
+        </form>
+      </article>
+    </dialog>
+
+    <section>
+      <header>
+        <h2>Listening To Now:</h2>
+      </header>
+
+
+      <!-- Spotify player -->
+      <iframe id="spotifyPlayer" src="https://open.spotify.com/embed/track/29U7stRjqHU6rMiS8BfaI9" width="100%"
+        height="200" frameborder="0" allowtransparency="true" allow="encrypted-media">
+      </iframe>
+    </section>
+
+
+    <!-- Lyrics -->
+    <section>
+      <dialog id="dialog">
+        <article id="lyricModal">
+          <h2>Lyrics:</h2>
+          <p id="lyricContent"></p>
+          <footer>
+            <button id="closeBtn" class="secondary">
+              Close
+            </button>
+          </footer>
+        </article>
+      </dialog>
+      <p id="lyricsFrame"></p>
+    </section>
+
+    <footer>
+      <h4>Thanks For Listening</h4>
+    </footer>
+
+  </main>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
