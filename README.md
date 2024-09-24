@@ -30,9 +30,9 @@ THEN I can search for a new song.
 
 ## Usage
 
-<a href="https://github.com/JoseGuache/Project1.git">Github Repo</a>
+<a href="https://github.com/JoseGuache/Project1_songSearcher.git">Github Repo</a>
 
-<a href="https://joseguache.github.io/Project1/">Live Page</a>
+<a href="https://joseguache.github.io/Project1_songSearcher/">Live Page</a>
 
 ![alt text](./assets/images/HomepageScreenshot.png)
 
