@@ -6,20 +6,9 @@ For our project, we created a website that allows users to search for an artist 
 
 ## User Story
 
-AS AN avid music listener, 
-I WANT a webpage i can search the song and lyrics on, 
-SO THAT i can enjoy my favorite songs and sing along
-
-## Acceptance Criteria
-
-WHEN I select the add a song, 
-THEN I am shown a form request the name of the song and artist.
-WHEN I search up a song,
-THEN I am shown the song on spotify, as well as the lyrics below it.
-WHEN I click on read more,
-THEN I am shown the complete lyrics to the song.
-WHEN I use the search bar,
-THEN I can search for a new song.
+- AS AN avid music listener, 
+- I WANT a webpage i can search the song and lyrics on, 
+- SO THAT i can enjoy my favorite songs and sing along
 
 ## Table of Contents
 
@@ -42,11 +31,15 @@ THEN I can search for a new song.
 
 <a href="https://picocss.com/">Our CSS Framework</a>
 
+<a href="https://open-props.style/">OpenProps library</a>
+
+<a href="https://fonts.googleapis.com">Google Fonts API</a>
+
+<a href="https://unsplash.com/@duck58cth?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
 <a href="https://rapidapi.com/Glavier/api/spotify23/playground/apiendpoint_1dc51f1b-a2c6-4f9a-9c6c-32019c7301b2">Our Music API</a>
 
 <a href="https://www.postman.com/cs-demo/public-rest-apis/request/algu09l/lyrics-search?tab=overview">Our Lyrics API</a>
-
-<a href="https://open-props.style/">OpenProp library</a>
 
 ## License
 
