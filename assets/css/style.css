@@ -1,0 +1,114 @@
+@import "https://unpkg.com/open-props";
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+ h4 {
+    display: flex;
+    justify-content: center;
+    font-family: "Rock Salt", cursive;
+    color: var(--pico-secondary-background)
+}
+
+h2{
+    font-family: "Rock Salt", cursive;
+    color: var(--pico-secondary-background)
+}
+
+/* html{
+    background-color: #aa8a63;
+}
+
+#lyricModal{
+    background-color: #aa8a63;
+}
+
+dialog footer{
+    background-color: #aa8a63;
+} */
+
+
+#header{
+    display: flex;
+    justify-content: end;
+}
+
+#lyricsFrame{
+    color: var(--pico-secondary-background)
+}
+
+#lyricContent{
+    color: var(--pico-secondary-background)
+}
+
+#searchModalBtn{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--font-size-2);
+    border: var(--border-size-3) solid var(--gray-1);
+    color: var(--red-1);
+}
+
+#newSong{
+    color: var(--pico-secondary-background)
+}
+
+#closeBtn{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--font-size-2);
+    border: var(--border-size-3) solid var(--gray-1);
+    color: var(--red-1);
+}
+
+#modal-demo button{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--font-size-4);
+    border: var(--border-size-3) solid var(--gray-1);
+    color: var(--red-1);
+}
+
+#modal-demo {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Style for the modal header to position the title and button */
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    /* background-color: #aa8a63; */
+}
+
+/* Style the close button */
+#searchCloseBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Hover effect for the close button */
+#searchCloseBtn:hover {
+    color: gray;
+}
+
+#searchForm button{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--font-size-4);
+    border: var(--border-size-3) solid var(--gray-1);
+    color: var(--red-1);
+}
