@@ -10,20 +10,29 @@ closeModal.addEventListener('click', () => {
     modal.close();
 });
 
-document.querySelector('form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the form from submitting the default way
+let form = document.querySelector('form');
 
-    const title = document.querySelector('#title').value;
-    const artist = document.querySelector('#artist').value;
+let listOfSongs = localStorage.getItem('listOfSongs');
 
-    if (title && artist) {
-        // Redirect to the second page with query parameters
-        const url = `index.html?title=${encodeURIComponent(title)}&artist=${encodeURIComponent(artist)}`;
-        console.log('Redirecting to:', url); // For debugging
+if (listOfSongs === null){
+    listOfSongs = [];
+    localStorage.setItem('listOfSongs', JSON.stringify(listOfSongs));
+} else {
+    listOfSongs = JSON.parse(listOfSongs);
+}
 
-        // Ensure the second page URL is correct
-        window.location.href = url;
-    } else {
-        alert('Name of artist and Song required.');
+
+form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    let songTitle = document.getElementById('title');
+    let artist = document.getElementById('artist');
+    let singleSong = {
+        title: songTitle.value,
+        artist: artist.value
     }
-});
+    listOfSongs.push(singleSong);
+    localStorage.setItem('listOfSongs', JSON.stringify(listOfSongs));
+    window.location.href = "index.html";
+})
+
+
